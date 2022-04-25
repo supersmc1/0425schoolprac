@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+
+    
+  </div>
+
+  <script>
+    /* 
+    ? 도전해보기 ★★★★★★★★★★★★★★★★★★★★★★★★
+    TODO: 아래의 자바스크립트 명령에 대한 의도를 유추 하시오.
+    */
+    document.body.style.padding = "0";
+    //도큐먼트 바디 스타일의 패딩 값은 0이야
+    document.body.style.margin = "0";
+    //도큐먼트 바디 스타일의 마진 값은 0이야
+    const root = document.getElementById("root");
+    // 변수 지정은 root 아이디값은 root 가져올게
+    let widthValue = 100;
+    //  변수지정 위스벨류 값은 100이야
+    let heightValue = 100;
+    //  변수지정 헤이트벨류 값은 100 이야
+    root.style.width = `${widthValue}vw`;
+    // 변수 룻의 스타일 윗스 값은 위스벨류+vw 값이야
+    root.style.height = `${heightValue}vh`;
+    //  변수 룻의 스타일 헤이트 값은 헤이트벨류+vh 값이야
+    root.style.backgroundColor = "darkblue";
+    //  변수 룻의 스타일  백그라운드 컬러는 다크블루야
+    let backgroundColorArray = ["#ff0000", "#333333"];
+    // 변수지정 백그라운드 컬러 배열은 무슨색인진 모르지만 두개의 색으로 지정할게
+    let setSwitch = 0;
+    //  변수지정 셋 스위치 의 값은 0이야
+    root.addEventListener("click", function() {
+      //  변수 룻에  이벤트 리스너로 클릭 하면 무언가바뀌는걸 넣어줘
+      if(setSwitch === 0) {
+        // 만약에 셋 스위치 값이 0이면
+        root.style.backgroundColor = backgroundColorArray[1];
+        // 변수 룻 스타일 백그라운드컬러 값을 백그라운드 컬러 배열 2번째꺼 해줘
+        setSwitch = 1;
+        // ????셋스위치 1
+      } else {
+        // 거짓이면
+        root.style.backgroundColor = backgroundColorArray[0];
+        // 변수 룻 스타일 백그라운드 컬러값은 백그라운드 컬러 배열의 1번째꺼야
+        setSwitch = 0;
+        // ??????셋 스위치 0
+        console.log(backgroundColorArray);
+      }
+
+    });
+
+
+
+
+    
+
+
+  </script>
+</body>
+</html>
